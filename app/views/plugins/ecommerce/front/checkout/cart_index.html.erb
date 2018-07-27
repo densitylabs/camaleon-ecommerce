@@ -40,8 +40,8 @@
       </table>
       <% if @products.size > 0 %>
           <div class="text-right">
-              <button type="submit" class="btn btn-default"> <%= t('.update', default: 'Update') %> </button>
-              <%= link_to "Proceed to Checkout", plugins_ecommerce_checkout_path(products: @products), class: "fa fa-shopping-cart btn btn-info" %>
+              <button type="submit" class="btn btn-ge-gray-radius"> <%= t('.update', default: 'Update') %> </button>
+              <a class="btn-ge-red" href="<%= plugins_ecommerce_checkout_path %>"><i class="fa fa-shopping-cart"></i> <%= t('.proceed', default: 'Proceed to Checkout') %></a>
           </div>
       <% end %>
   <% end %>
