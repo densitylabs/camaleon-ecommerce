@@ -4,7 +4,7 @@
     shipping_address = cart.get_meta("shipping_address", {}) || {}
 %>
 <div class="row">
-    <div id="billing_address" class="col-md-6">
+    <div id="billing_address" class="col-md-6 offset-md-3">
         <h3><%= t('.billing_address') %></h3>
         <div class="form-group">
             <label><%= t('.firstname', default: 'First Name') %></label>
@@ -90,7 +90,7 @@
     <div class="clearfix"></div>
     <% unless defined?(as_partial) %>
         <div class="text-right col-md-12">
-            <button type="submit" class="btn btn-primary"><%= t('.next', default: 'Next') %></button>
+            <button type="submit" class="btn-ge-red-radius"><%= t('.next', default: 'Next') %></button>
         </div>
     <% end %>
 </div>
