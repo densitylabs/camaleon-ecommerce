@@ -1,20 +1,20 @@
 class Plugins::Ecommerce::CartDecorator < Draper::Decorator
   delegate_all
   def the_sub_total
-    h.e_parse_price(object.sub_total)
+    "$#{'%.2f' % object.sub_total}"
   end
 
   def the_total_discounts
-    h.e_parse_price(object.total_discounts)
+    "$#{'%.2f' % object.total_discounts}"
   end
 
   def the_total_amount
-    h.e_parse_price(object.total_amount)
+    "$#{'%.2f' % object.total_amount}"
   end
   alias_method :the_price, :the_total_amount
 
   def the_tax_total
-    h.e_parse_price(object.tax_total)
+    "$#{'%.2f' % object.tax_total}"
   end
 
   def the_weight_total
@@ -22,7 +22,7 @@ class Plugins::Ecommerce::CartDecorator < Draper::Decorator
   end
 
   def the_total_shipping
-    h.e_parse_price(object.total_shipping)
+    "$#{'%.2f' % object.total_shipping}"
   end
 
   # check if item is a phisical product, to not display shipping address form
